@@ -1,6 +1,6 @@
 interface AvatarProps {
   username: string;
-  size: string;
+  size: "big" | "small";
 }
 
 export default function Avatar({ username, size }: AvatarProps) {

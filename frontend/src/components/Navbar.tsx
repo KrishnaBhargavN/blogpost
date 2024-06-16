@@ -18,7 +18,7 @@ function Navbar() {
             />
           </div>
           <div className="flex flex-col justify-center pr-10">
-            <div className="items-center">
+            <div className="items-center w-10">
               <Avatar size={"big"} username="Krishna Bhargav N" />
             </div>
           </div>

@@ -20,7 +20,7 @@ function BlogCard({
     <Link to={`/id/${id}`}>
       <div className="border-b-2  pl-2 p-6 cursor-pointer">
         <div className="flex justify-start pb-2">
-          <div className="">
+          <div className="w-6">
             <Avatar size={"small"} username={authorName} />
           </div>
           <div className="px-4  text-slate-600">{authorName}</div>
