@@ -27,7 +27,9 @@ function BlogCard({
           <div className="flex flex-col justify-center">
             <CircleDot />
           </div>
-          <div className="text-slate-400 pl-4">{publishedDate}</div>
+          <div className="text-slate-400 pl-4">
+            {publishedDate.substring(0, 10)}
+          </div>
         </div>
         <div className="text-xl font-bold">{title}</div>
         <div className="text-sm   text-slate-500">

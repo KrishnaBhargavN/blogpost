@@ -17,7 +17,7 @@ function BlogInfo({ blog }: { blog: Blog }) {
         </div>
       </div>
       <div className=" text-slate-600 pt-4">
-        posted on {blog?.publishedDate}
+        posted on {blog?.publishedDate.substring(0, 10)}
       </div>
       <div>
         <div className=" text-balance justify-center py-10">

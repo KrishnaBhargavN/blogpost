@@ -8,7 +8,7 @@ function Blogs() {
   if (loading)
     return (
       <div>
-        <Navbar />
+        <Navbar username="Anonymous" />
         <div className="flex justify-center">
           <div className="flex flex-col w-4/6 items-center">
             <Skeletons />
@@ -21,10 +21,11 @@ function Blogs() {
         </div>
       </div>
     );
+  console.log(blogs);
 
   return (
     <div>
-      <Navbar />
+      <Navbar username={blogs[0].author.name || "Anonymous"} />
       <div className="flex justify-center">
         <div className="flex flex-col justify-center max-w-4xl">
           {blogs.map((blog) => (
@@ -35,7 +36,7 @@ function Blogs() {
               content={blog.content}
               publishedDate={blog.publishedDate}
               authorName={
-                blog.author.name === null ? "Ananymous" : blog.author.name
+                blog.author.name === null ? "Anonymous" : blog.author.name
               }
             />
           ))}

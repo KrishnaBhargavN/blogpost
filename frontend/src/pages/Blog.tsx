@@ -24,7 +24,7 @@ function Blog() {
     return (
       <div>
         <div>
-          <Navbar />
+          <Navbar username="Anonymous" />
           <div className="grid grid-cols-12">
             <div className="col-span-8">
               <BlogSkeletons />
@@ -38,7 +38,7 @@ function Blog() {
     );
   return (
     <div>
-      <Navbar />
+      <Navbar username={blog.author.name || "Anonymous"} />
       <div className="grid grid-cols-12">
         <div className="col-span-8">
           <BlogInfo blog={blog} />

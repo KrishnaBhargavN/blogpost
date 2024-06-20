@@ -2,7 +2,7 @@ import Avatar from "./Avatar";
 import NewPostButton from "./NewPostButton";
 import { useNavigate } from "react-router-dom";
 
-function Navbar() {
+function Navbar({ username }: { username: string }) {
   const navigate = useNavigate();
   return (
     <div>
@@ -19,7 +19,7 @@ function Navbar() {
           </div>
           <div className="flex flex-col justify-center pr-10">
             <div className="items-center w-10">
-              <Avatar size={"big"} username="Krishna Bhargav N" />
+              <Avatar size={"big"} username={username} />
             </div>
           </div>
         </div>
