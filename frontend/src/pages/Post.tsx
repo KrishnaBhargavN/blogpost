@@ -18,7 +18,7 @@ function Post() {
   const headers = {
     Authorization: "Bearer " + localStorage.getItem("jwt"),
   };
-  const { loading, blogs } = useBlogs();
+  const { blogs } = useBlogs();
   return (
     <div>
       <Navbar username={blogs[0].author.name || "Anonymous"} />

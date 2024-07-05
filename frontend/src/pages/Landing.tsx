@@ -5,7 +5,6 @@
  */
 
 import Button from "../components/Button";
-import NewPostButton from "../components/NewPostButton";
 
 export default function Landing() {
   return (
