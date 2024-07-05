@@ -5,6 +5,7 @@ import TextArea from "../components/TextArea";
 import TitleInput from "../components/TitleInput";
 import axios from "axios";
 import { BACKEND_URL } from "../config";
+import { useBlogs } from "../hooks/useBlogs";
 
 function Post() {
   const [title, setTitle] = useState<string>("");
@@ -17,10 +18,10 @@ function Post() {
   const headers = {
     Authorization: "Bearer " + localStorage.getItem("jwt"),
   };
-
+  const { loading, blogs } = useBlogs();
   return (
     <div>
-      <Navbar />
+      <Navbar username={blogs[0].author.name || "Anonymous"} />
       <div className="pt-5 pb-10 pr-10 ">
         <SubmitPost
           name="Post"
